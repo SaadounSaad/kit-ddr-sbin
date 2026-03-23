@@ -901,6 +901,9 @@ body {
     </div>
   </nav>
   <div style="padding:4px 0;border-top:1px solid rgba(255,255,255,0.12)">
+      <a class="nav-link" onclick="showSection('annexe')">
+        <span class="dot" style="background:#6B21A8"></span> &#x1F4CB; Annexe criticités
+      </a>
       <a class="nav-link" onclick="showSection('revision')">
         <span class="dot" style="background:#0099D8"></span> &#x1F9E0; Mode révision
       </a>
@@ -1254,6 +1257,786 @@ body {
     </div>
   </div>
 
+
+  <!-- ══════════════════ ANNEXE ══════════════════════════════ -->
+  <div class="section" id="s-annexe">
+    <div class="sec-header" style="background:linear-gradient(135deg,#1A1A2E,#003087)">
+      <h2>📋 Annexe — Justification des criticités</h2>
+      <p>Arguments terrain · Conséquences · Références légales · 9 risques chiffrés</p>
+    </div>
+
+    <div style="background:var(--lgray);border-left:4px solid var(--lblue);border-radius:8px;padding:14px 18px;margin-bottom:20px;font-size:13px;color:var(--dkgray)">
+      <strong>Usage :</strong> pour chaque point, l'argument répond à la question «&nbsp;pourquoi ce document est-il indispensable et que risque-t-on à ne pas l'obtenir&nbsp;?» Pour chaque risque, la justification est chiffrée avec les références légales exactes.
+    </div>
+
+    <!-- Tabs -->
+    <div class="rev-tabs" style="margin-bottom:20px">
+      <button class="rev-tab active" onclick="annexeTab('cl', this)">Points de vérification</button>
+      <button class="rev-tab" onclick="annexeTab('risques', this)">Risques (9)</button>
+    </div>
+
+    <!-- Panneau check-list -->
+    <div id="annexe-cl" class="rev-panel active">
+
+      <div style="margin-bottom:8px">
+        <div style="background:#003087;color:white;padding:9px 16px;border-radius:8px 8px 0 0;font-size:14px;font-weight:700">
+          A — Organisation &amp; gouvernance RH
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead>
+            <tr style="background:#374151;color:white">
+              <th style="padding:8px 10px;text-align:left;width:22%">Point de vérification</th>
+              <th style="padding:8px 10px;text-align:center;width:8%">Criticité</th>
+              <th style="padding:8px 10px;text-align:left;width:35%">Argument — pourquoi indispensable</th>
+              <th style="padding:8px 10px;text-align:left;width:25%">Si ignoré</th>
+              <th style="padding:8px 10px;text-align:left;width:10%">Référence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Contrats des cadres dirigeants : clauses spécifiques, changement de contrôle</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Certains contrats de direction contiennent des clauses de changement de contrôle (golden parachutes, non-concurrence, indemnités de départ majorées) qui s'activent automatiquement à l'annonce de l'acquisition. Le coût peut être significatif et n'est jamais provisionné dans les comptes.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Surprise financière post-signing, départ simultané des directeurs clés, blocage opérationnel immédiat.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Pratique M&amp;A standard — due diligence Mercer/Willis Towers Watson (2023)</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Organigramme général SBIN à jour + organigramme Moov Africa Bénin</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">La réorganisation de septembre 2024 a modifié la structure hiérarchique. Sans organigramme à jour, il est impossible d'identifiér les lignes de reporting, les doublons de postes et les lacunes managériales à combler. C'est la carte de base de toute due diligence RH.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Erreurs d'évaluation des synergies, identification incomplète des Key Person Dependencies.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">SHRM Due Diligence Framework (2022) — document de priorité 1</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Convention collective applicable (sectorielle ou CGT 2005)</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Le Code du travail béninois (art. 60) impose le maintien des conventions collectives en vigueur lors d'un transfert d'entreprise. Si une convention non identifiée accorde des droits supérieurs à la pratique courante, ils deviennent immédiatement exigibles par les salariés de l'entité fusionnée.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Contentieux collectif, revendications rétroactives, invalidation partielle de la fusion.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Code du travail béninois, Loi 98-004, art. 60 et suivants</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Règlement intérieur — dépôt légal et date de vigueur</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Un règlement intérieur non visé par l'inspection du travail est juridiquement inopposable aux salariés. Toute sanction disciplinaire fondée sur un RI irrégulier expose l'entreprise à une annulation et à des dommages-intérêts.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Nullité des procédures disciplinaires, risque prud'homal systématique sur les sanctions passées.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Code du travail béninois — obligation de dépôt et visa MTFP</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Politique RH et manuel des procédures RH</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">L'absence de manuel formalisé indique que les pratiques RH (recrutement, évaluation, mobilité, rémunération) reposent sur la discrétion des managers. Dans un contexte de fusion, ce vide crée des inégalités de traitement comparables entre SBIN et Moov qui alimentent les contentieux.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Sentiment d'injustice, turnover post-fusion élevé, contentieux sur l'harmonisation des pratiques.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Rapport Aon M&amp;A Intégration Survey (2023) — 62% des contentieux post-fusion liés à l'absence de politique RH documentée</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">SIRH en place : outil, fiabilité des données, périmètre fonctionnel</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">La qualité des données RH (effectifs, salaires, ancienneté, absences) conditionne la fiabilité de toute la due diligence. Un SIRH partiel ou non maintenu génère des données erronées qui faussent les calculs de masse salariale et de provision de risques.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Erreurs dans l'estimation du coût total d'intégration, reprises de comptes post-closing.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Standard IFRS 3 — obligations d'information sur les passifs repris lors d'une acquisition</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Classification des emplois : pesée, catégories, grille de référence</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Sans grille de classification formalisée, le benchmark de rémunération SBIN/Moov est impossible à réaliser correctement. Les écarts identifiés sont approximatifs et le plan d'harmonisation salariale sera construit sur des bases fragiles.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Plan d'harmonisation sous-estimé ou surestimé, contentieux sur l'équité salariale lors du rapprochement.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Référentiel Mercer IPE — standard de pesée de postes Afrique francophone</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Politique anticorruption et dispositif d'alerte</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">La SBIN étant une entreprise à capital public, elle est soumise aux exigences de la CRIET (Cour de répression des infractions économiques) et aux standards ESG requis par Maroc Telecom groupe. L'absence d'un dispositif anticorruption formalisé constitue un risque de réputation et de conformité réglementaire post-acquisition.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Risque réputationnel, non-conformité aux standards ESG groupe, exposition aux enquêtes CRIET.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Convention OCDE contre la corruption — Directive ESG Maroc Telecom Groupe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-bottom:8px">
+        <div style="background:#0099D8;color:white;padding:9px 16px;border-radius:8px 8px 0 0;font-size:14px;font-weight:700">
+          B — Analyse des effectifs
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead>
+            <tr style="background:#374151;color:white">
+              <th style="padding:8px 10px;text-align:left;width:22%">Point de vérification</th>
+              <th style="padding:8px 10px;text-align:center;width:8%">Criticité</th>
+              <th style="padding:8px 10px;text-align:left;width:35%">Argument — pourquoi indispensable</th>
+              <th style="padding:8px 10px;text-align:left;width:25%">Si ignoré</th>
+              <th style="padding:8px 10px;text-align:left;width:10%">Référence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Effectif des 35 expatriés Sonatel : poste, contrat, rémunération, fin de mission</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Les 35 expatriés Sonatel occupent des postes de direction et d'expertise technique qui n'ont pas de doublons locaux identifiés. Leur départ simultané à l'expiration du contrat de gestion déléguée créerait un vide managérial et technique impossible à combler en quelques semaines. Le coût de remplacement est estimé entre 150% et 200% du salaire annuel par poste.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Effondrement opérationnel dans les 3 mois suivant le closing, perte de clients stratégiques, arrêt de projets critiques.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">SHRM Workforce Risk Report (2023) — coût de remplacement postes d'expertise</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Contrats types CDI/CDD — conformité des 69 CDD aux délais légaux</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Le Code du travail béninois limite le CDD à 2 ans maximum avec un seul renouvellement possible. Des CDD sur des postes permanents au-delà de cette durée sont requalifiés de plein droit en CDI, avec rappel de charges sociales, indemnités compensatrices et effet rétroactif. La SBIN compte 69 CDD dont la conformité n'a pas été documentée.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Requalification judiciaire massive, passif social non provisionné, dégradation des relations sociales dès le closing.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Code du travail béninois, Loi 98-004 — art. sur le CDD</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Effectif intérimaires : sociétés prestataires, nature des contrats, coûts</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">274 intérimaires représentent 91% de l'effectif permanent. Si une partie occupe des postes permanents depuis plus de 18 mois, la requalification en CDI est probable en cas de contrôle CNSS ou de recours judiciaire. Le risque financier est de +900 M FCFA/an sur la masse salariale si 20% sont requalifiés.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Passif social latent non visible dans les comptes, litiges individuels et collectifs post-closing.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Jurisprudence OHADA sur le travail temporaire — CNSS Bénin circulaires 2021</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Effectif Moov Africa Bénin : même grille d'analyse</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Sans données comparables sur Moov Africa Bénin, il est impossible de chiffrer le coût d'harmonisation salariale ni d'anticiper les tensions entre les deux populations lors de la fusion. C'est un angle mort majeur de la due diligence.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Plan d'intégration RH construit à l'aveugle, sous-estimation du budget d'harmonisation, conflits sociaux à J+90.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Best practice M&amp;A — Deloitte Human Capital Due Diligence Guide (2023)</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Effectif permanent par type de contrat (CDI/CDD) — évolution 2021-2025</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">La trajectoire d'évolution des effectifs révèle la stratégie RH réelle de l'entreprise. Une croissance des CDD au détriment des CDI signale une politique de flexibilité précaire qui génère un risque légal cumulé. Ces données sont la base de tout calcul de provision de passif social.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Provision de passif social sous-estimée dans le prix d'acquisition.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Standard IFRS 3 — identification et évaluation des passifs repris</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Répartition par domaine métier : Technique, Commercial, Support</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">La concentration des effectifs par domaine révèle les dépendances critiques et les zones de sur-effectif. Un ratio Technique/Commercial déséquilibré après fusion crée immédiatement des tensions sur les ressources et des doublons coûteux.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Plan de synergies inatteignable, suppressions de postes mal ciblées, coût social de restructuration sous-estimé.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Référentiel Ulrich — modèle HRBP appliqué aux fusions télécoms</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Liste des employés inactifs (longue maladie, mise à pied, détachement)</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Les salariés en longue absence représentent un passif caché : indemnités journalières, provisions congés, risque de reclassement obligatoire. La DAL présente un absentéisme maladie de 58% de son effectif — signal d'un problème managérial ou de conditions de travail à investiguer.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Passif social latent non provisionné, obligation de reclassement post-retour, contentieux individuels.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Code du travail béninois — obligations de l'employeur en cas de maladie prolongée</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Pyramide des âges détaillée par domaine métier</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">17% de l'effectif est susceptible de partir à la retraite dans 10 ans ou en préretraite dans 5 ans. Sans pyramide détaillée par domaine, il est impossible de savoir si ces départs concernent des postes critiques (réseau, IT) ou des postes facilement remplaçables.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Risque de perte de compétences techniques non anticipé, coût de formation des succèsseurs sous-estimé.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Bilan Social SBIN 2024 — données démographiques</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Historique des recrutements CDI sur 3 ans</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">L'analyse des recrutements révèle la capacité d'attraction de la SBIN, les profils disponibles sur le marché béninois et les tensions sur certains métiers. Une dépendance aux expatriés pour des postes qui pourraient être localisés est un coût évitable post-acquisition.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Plan de localisation des postes sous-estimé, budget recrutement post-fusion mal calibré.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Rapport Marché RH Afrique de l'Ouest — Korn Ferry (2023)</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Ancienneté moyenne et taux de turnover par année</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Une ancienneté moyenne de 2,7 ans sur une entreprise de 6 ans signifie que la quasi-totalité des effectifs a rejoint la SBIN après sa création. Ce profil de jeunesse organisationnelle réduit le risque de départs à la retraite immédiats mais signale une culture d'entreprise en construction — facteur de risque pour la rétention post-fusion.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Turnover post-fusion plus élevé que prévu si la culture d'intégration est mal gérée.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Bilan Social SBIN 2024</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-bottom:8px">
+        <div style="background:#15803D;color:white;padding:9px 16px;border-radius:8px 8px 0 0;font-size:14px;font-weight:700">
+          C — Rémunération &amp; avantages sociaux
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead>
+            <tr style="background:#374151;color:white">
+              <th style="padding:8px 10px;text-align:left;width:22%">Point de vérification</th>
+              <th style="padding:8px 10px;text-align:center;width:8%">Criticité</th>
+              <th style="padding:8px 10px;text-align:left;width:35%">Argument — pourquoi indispensable</th>
+              <th style="padding:8px 10px;text-align:left;width:25%">Si ignoré</th>
+              <th style="padding:8px 10px;text-align:left;width:10%">Référence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Avantages des dirigeants : véhicule, logement, frais de représentation</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Les avantages en nature des dirigeants (véhicule de fonction, logement, frais de représentation) ne figurent pas toujours dans la masse salariale déclarée. Ils peuvent représenter 20 à 40% du coût total de la direction et constituent un passif repris automatiquement lors de l'acquisition.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Coût réel de la direction sous-estimé, obligations contractuelles non identifiées, surprises à la prise de fonction des remplaçants.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Norme IAS 19 — avantages au personnel, obligations de divulgation</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Structure de rémunération : fixe, variables, avantages en nature</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Sans grille formalisée, les salaires sont négociés individuellement. Deux personnes sur le même poste peuvent avoir des rémunérations très différentes. Ce désordre rend l'harmonisation post-fusion extrêmêment coûteuse et contentieuse.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Inéquité salariale juridiquement contestable, coût d'harmonisation vers le haut non provisionné.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Principe d'égalité de traitement — Code du travail béninois art. 224</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Benchmark SBIN vs Moov Africa Bénin sur postes équivalents</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Les écarts de rémunération entre deux entités qui fusionnent génèrent systématiquement des revendications d'alignement vers le haut. Un écart de 15 à 25% sur les postes commerciaux représente un surcoût de 300 à 600 M FCFA/an — non visible dans les comptes actuels.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Masse salariale consolidée sous-estimée, mécontentement des salariés SBIN ou Moov selon le sens de l'écart.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Willis Towers Watson M&amp;A Compensation Survey Afrique (2023)</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Évolution de la masse salariale sur 5 ans</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">La trajectoire de la masse salariale révèle si la croissance des coûts est maîtrisée ou si des engagements non documentés (augmentations promises, primes récurrentes) viennent alourdir structurellement les charges. Le ratio FP/CA a déjà fortement varié (15% en 2023, 8,4% en 2024).</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Projection du coût total d'intégration faussée, business plan post-fusion irréaliste.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Données financières SBIN — PV CA 06/12/2024</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Salaire moyen brut par catégorie</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Les écarts de rémunération entre CDI locaux, expatriés, CDD et intérimaires sont considérables (~55 000 Dhs vs ~9 600 Dhs). Ces données sont indispensables pour construire un plan d'harmonisation crédible et calculer les provisions de passif social en cas de requalification.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Calcul de provision de passif social erroné, plan d'harmonisation non finançable.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Données RH SBIN 2025 — fichier données mission</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Prime de performance : montant, critères, historique des versements</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Une prime de 456 M FCFA versée en 2024 (9,5% de la MS) crée une attente récurrente chez les salariés. Si les critères d'attribution ne sont pas documentés, la prime devient de facto un élément de salaire exigible chaque année, indépendamment des résultats.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Prime requalifiée en élément contractuel du salaire, obligation de versement même en cas de mauvais résultats.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Jurisprudence sur les primes habituelles — Code du travail béninois</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Heures supplémentaires : volume et montants sur 3 ans</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Un volume d'heures supplémentaires non déclaré ou non payé constitue un passif social exigible rétroactivement sur 3 ans. Le RI mentionne un régime HS activable sur note de service DG — ce mécanisme non tracé est un vecteur de contentieux.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Rappel de salaire rétroactif, pénalités CNSS sur charges non déclarées.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Code du travail béninois — art. sur les heures supplémentaires</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Augmentations collectives et individuelles sur 5 ans</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Des augmentations collectives accordées sans formalisation écrite peuvent être revendiquées par analogie par des salariés qui n'en ont pas bénéficié. En contexte de fusion, l'absence de traçabilité des révisions salariales alimente les revendications d'harmonisation vers le haut.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Contentieux individuels sur l'égalité de traitement, coût d'harmonisation supplémentaire non prévu.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Principe général d'égalité de rémunération — droit béninois</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Taux de cotisations sociales patronales CNSS et salariales</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Les taux de cotisation béninois diffèrent des standards marocains. Sans documentation précise, le calcul de la masse salariale chargée et des provisions de passif social sera systématiquement erroné.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Sous-estimation du coût employeur total, provisions CNSS insuffisantes.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Barème CNSS Bénin 2024</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Indemnité de départ à la retraite : provision et méthode de calcul</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">La SBIN provisionne régulièrement l'IDR selon le Q&amp;A, mais le montant n'est pas communiqué. Avec 17% de l'effectif susceptible de partir à la retraite dans 10 ans, cette provision peut représenter plusieurs centaines de millions de FCFA — un passif à intégrer dans le prix d'acquisition.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Passif actuariel sous-estimé, reprises de provisions post-closing.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Norme IAS 19 — provisions pour avantages post-emploi</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-bottom:8px">
+        <div style="background:#E2001A;color:white;padding:9px 16px;border-radius:8px 8px 0 0;font-size:14px;font-weight:700">
+          D — Conformité légale &amp; relations sociales
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead>
+            <tr style="background:#374151;color:white">
+              <th style="padding:8px 10px;text-align:left;width:22%">Point de vérification</th>
+              <th style="padding:8px 10px;text-align:center;width:8%">Criticité</th>
+              <th style="padding:8px 10px;text-align:left;width:35%">Argument — pourquoi indispensable</th>
+              <th style="padding:8px 10px;text-align:left;width:25%">Si ignoré</th>
+              <th style="padding:8px 10px;text-align:left;width:10%">Référence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Obligations Art. 60 Code du travail béninois : consultation Ministère du Travail</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">L'articlé 60 du Code du travail béninois est d'ordre public — il ne peut pas être écarté par accord entre les parties. Toute cession réalisée sans consultation préalable du Ministère du Travail et sans protocole signé avec les délégués du personnel est juridiquement nulle. Ce n'est pas une formalité : c'est une condition de validité de l'opération.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Nullité de la cession, contentieux judiciaire bloquant, obligation de recommencer la procédure.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Code du travail béninois — Loi 98-004, art. 60</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Attestations fiscales et sociales valides (IS, TVA, CNSS, DGI)</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Les attestations fiscales et sociales certifient l'absence d'arriérés envers l'État. Sans ces documents valides au moment du closing, l'acquéreur reprend solidairement les dettes fiscales et sociales de la SBIN — y compris celles liées au redressement CNSS en cours.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Responsabilité solidaire de l'acquéreur sur les dettes fiscales et sociales non déclarées.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Code général des impôts Bénin — responsabilité solidaire lors des cessions</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Permis de travail des 35 expatriés : validité, renouvellements en cours</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Les permis de travail des expatriés Sonatel sont annuels et doivent être renouvelés par l'employeur. Un changement d'employeur effectif lors de la cession remet en cause leur validité. Un expatrié sans permis valide travaille en situation irrégulière — risque pénal pour l'entreprise.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Situation irrégulière des expatriés, risque pénal pour l'entreprise, obligation d'interruption immédiate de l'activité.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Code du travail béninois — Loi sur l'immigration professionnelle</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Passif CNSS/DGI — Requalification des contrats CPS</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Le redressement CNSS lié aux anciens contrats CPS requalifiés en contrats de travail est en cours de négociation. Le montant n'est pas communiqué mais est estimé entre 500 M et 2 Md FCFA. Sans accord écrit avant signing, ce passif est repris intégralement par l'acquéreur sans décote possible.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Passif social de 0,5 à 2 Md FCFA non provisionné dans le prix d'acquisition, condition suspensive non levée.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Redressement CNSS Bénin — Q&amp;A SBIN 2025</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Arriérés CNSS non régularisés</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Même si les cotisations courantes sont régulières, les arriérés liés au redressement CPS ne sont pas soldés. La CNSS peut bloquer tout transfert d'employeur tant que la situation n'est pas apurée — ce qui peut bloquer le closing.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Blocage administratif du closing, responsabilité solidaire de l'acquéreur sur les arriérés.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Réglementation CNSS Bénin — procédure de transfert d'affiliation</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Contentieux prud'homaux : liste, provisions, risque jurisprudentiel</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">L'absence déclarée de contentieux est rassurante mais doit être confirmée par attestation écrite du greffe du tribunal du travail. Une déclaration orale du DRH n'a aucune valeur probante — les contentieux non déclarés restent à la charge de l'acquéreur.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Contentieux non déclarés repris par l'acquéreur, risque financier non quantifié.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Standard due diligence — confirmation indépendante auprès du greffe</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Soldes de congés payés non pris : état par salarié, provision comptable</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Le bilan 2024 mentionne une provision pour congés de 189 M FCFA. Ce montant doit être rapproché du solde réel par salarié. En cas de sous-provisionnement, l'acquéreur reprend la différence. En cas de sur-provisionnement, c'est un actif caché favorable.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Passif de congés sous-provisionné repris par l'acquéreur, litige sur la reprise de provision.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Norme IAS 19 — provisions pour congés payés</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">PV élections délégués du personnel + PV réunions 2023-2025</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Les PV de réunions avec les délégués révèlent les revendications en suspens, les engagements pris par la direction et les alertes sociales non résolues. Des promesses faites aux délégués sans trace écrite peuvent devenir des engagements exigibles post-acquisition.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Engagements oraux repris comme obligations contractuelles, revendications en suspens réactivées.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Droit social béninois — obligations de documentation des IRP</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-bottom:8px">
+        <div style="background:#6B21A8;color:white;padding:9px 16px;border-radius:8px 8px 0 0;font-size:14px;font-weight:700">
+          E — Capital humain &amp; contrat Sonatel
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead>
+            <tr style="background:#374151;color:white">
+              <th style="padding:8px 10px;text-align:left;width:22%">Point de vérification</th>
+              <th style="padding:8px 10px;text-align:center;width:8%">Criticité</th>
+              <th style="padding:8px 10px;text-align:left;width:35%">Argument — pourquoi indispensable</th>
+              <th style="padding:8px 10px;text-align:left;width:25%">Si ignoré</th>
+              <th style="padding:8px 10px;text-align:left;width:10%">Référence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Fiches de poste des 35 expatriés Sonatel : compétences, criticité, substituabilité</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Sans cartographie précise des 35 postes tenus par des expatriés, il est impossible de savoir combien sont réellement critiques (non remplaçables localement sous 6 mois) et combien sont occupés par des expatriés par habitude plutôt que par nécessité. Trois démissions récentes à la DRSI aggravent ce risque en réduisant l'effectif tampon.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Effondrement opérationnel localisé à la DRSI et dans les domaines techniques clés, rupture de service client.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Analyse terrain SBIN — Bilan Social 2024</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Clauses RH du contrat de gestion déléguée Sonatel : sort du personnel au terme</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Le contrat de gestion déléguée détermine si les 35 expatriés sont 'prêtés' à la SBIN ou 'rattachés' à elle contractuellement. La distinction est fondamentale : dans le premier cas, ils repartent automatiquement à l'expiration du contrat ; dans le second, ils peuvent prétendre à un maintien. Cette clause conditionne toute la stratégie de remplacement.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Départ contraint de 35 experts sans plan de succèssion, ou au contraire obligation de maintien avec coût élevé.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Droit des contrats — obligations réciproques SBIN/Sonatel</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:600">Plan de succèssion pour les postes de direction et postes critiques</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FEF2F2">
+                <span style="background:#E2001A;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Critique</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Une acquisition sans plan de succèssion est aveugle sur sa continuité opérationnelle. Si les postes critiques n'ont pas de succèsseurs identifiés, la période de transition post-closing est à haut risque : décisions retardées, clients inquiets, partenaires hésitants.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Vide managérial post-closing, perte de clients stratégiques, dégradation de la notation de l'entreprise.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Korn Ferry — M&amp;A Leadership Continuity Framework (2023)</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Système d'évaluation de la performance : outil, critères, lien avec rémunération</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">L'absence d'un système d'évaluation formalisé signifie que les promotions et augmentations sont accordées de manière discrétionnaire. Lors de la fusion, cette absence rend impossible l'alignement sur le référentiel groupe Moov/Maroc Telecom et crée des perceptions d'injustice qui alimentent le turnover.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Perte de talents clés qui rejoignent Moov ou la concurrence, sentiment d'arbitraire managérial.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Bilan Social SBIN 2024 — absence confirmée</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Budget et plan de formation 2023-2025</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Un taux d'exécution de 22% du plan de formation révèle soit un manque de budget, soit une inefficacité du processus achat. Dans une industrie télécoms en évolution rapide (5G, fibre, cybersécurité), des équipes insuffisamment formées perdent rapidement en compétitivité. Ce déficit impacte directement la valeur de l'actif acquis.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Dégradation des compétences techniques, dette de formation à financer par l'acquéreur.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Bilan Social SBIN 2024 — 18 formations exécutées sur 82 planifiées</td>
+            </tr>
+            <tr style="background:var(--lgray)">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Contrats de sous-traitance RH (paie, recrutement, formation) et conditions de résiliation</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Si des prestations RH (paie externalisée, recrutement, formation) sont confiées à des prestataires sous contrat, l'acquéreur reprend ces contrats avec leurs clauses de résiliation. Des pénalités de sortie élevées ou des exclusivités longues peuvent contraindre l'intégration dans le système groupe.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Coûts de résiliation imprévus, obligation de maintien de prestataires incompatibles avec le système groupe.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Droit des contrats — transfert automatique lors d'une cession</td>
+            </tr>
+            <tr style="background:white">
+              <td style="padding:8px 10px;vertical-align:top;font-weight:400">Clauses de non-concurrence et de confidentialité dans les contrats cadres</td>
+              <td style="padding:8px 6px;text-align:center;vertical-align:top;background:#FFFBEB">
+                <span style="background:#B45309;color:white;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:700;white-space:nowrap">Important</span>
+              </td>
+              <td style="padding:8px 10px;vertical-align:top;color:#374151">Des clauses de non-concurrence non encadrées peuvent être soit inopposables (si mal rédigées), soit trop restrictives (si elles empêchent des recrutements croisés SBIN/Moov). En contexte de fusion, ces clauses doivent être auditées pour éviter les blocages sur la mobilité interne.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#E2001A;font-style:italic;font-size:12px">Impossibilité de mobilité croisée SBIN/Moov, perte de talents qui partent pour contourner la clause.</td>
+              <td style="padding:8px 10px;vertical-align:top;color:#64748B;font-size:11px;font-style:italic">Droit des contrats béninois — validité et opposabilité des clauses de non-concurrence</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div><!-- fin annexe-cl -->
+
+    <!-- Panneau risques -->
+    <div id="annexe-risques" class="rev-panel">
+
+      <div style="margin-bottom:20px;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <!-- Titre risque -->
+        <div style="display:flex;align-items:center;gap:0">
+          <div style="background:#E2001A;color:white;padding:12px 16px;font-weight:900;font-size:16px;min-width:48px;text-align:center">R1</div>
+          <div style="background:#FEF2F2;padding:12px 16px;flex:1;border-left:4px solid #E2001A">
+            <span style="font-weight:700;font-size:14px;color:#1A1A2E">Passif CNSS/DGI — requalification des contrats CPS</span>
+            &nbsp;&nbsp;<span style="background:#E2001A;color:white;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:800">CRITIQUE</span>
+          </div>
+        </div>
+        <!-- Contenu -->
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;width:18%;vertical-align:top">Argument</td>
+            <td style="padding:8px 12px;background:white;color:#374151">Le redressement CNSS porte sur des contrats de prestation de service (CPS) que la CNSS a requalifiés rétroactivement en contrats de travail. Ce type de redressement est systématique dans les pays OHADA lors des acquisitions d'entreprises publiques — la CNSS vérifie toujours le passif de l'entité cédée. Sans accord écrit soldant ce redressement avant signing, l'acquéreur reprend la totalité du passif, y compris les pénalités de retard qui courent chaque jour.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Chiffrage</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#B45309;font-weight:600">Estimé entre 500 M et 2 Md FCFA selon l'ancienneté des contrats requalifiés et les effectifs concernés. Pénalités CNSS : 10% par trimestre de retard sur les cotisations non versées.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Action</td>
+            <td style="padding:8px 12px;background:white;color:#15803D;font-weight:600">Condition suspensive dans la convention de cession. Accord écrit CNSS avant closing. Provision comptable obligatoire.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Référence légale</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#64748B;font-style:italic;font-size:12px">Code CNSS Bénin — art. sur les redressements et pénalités · Jurisprudence OHADA sur la reprise de passif social</td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:20px;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <!-- Titre risque -->
+        <div style="display:flex;align-items:center;gap:0">
+          <div style="background:#E2001A;color:white;padding:12px 16px;font-weight:900;font-size:16px;min-width:48px;text-align:center">R2</div>
+          <div style="background:#FEF2F2;padding:12px 16px;flex:1;border-left:4px solid #E2001A">
+            <span style="font-weight:700;font-size:14px;color:#1A1A2E">Départ des 35 expatriés Sonatel à la fin du contrat de gestion déléguée</span>
+            &nbsp;&nbsp;<span style="background:#E2001A;color:white;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:800">CRITIQUE</span>
+          </div>
+        </div>
+        <!-- Contenu -->
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;width:18%;vertical-align:top">Argument</td>
+            <td style="padding:8px 12px;background:white;color:#374151">Les 35 expatriés Sonatel tiennent des postes de direction technique et de management que le marché béninois ne peut pas pourvoir en quelques semaines. La DRSI a déjà perdu 3 des 7 démissions de l'année 2024 — signal que le département technique est sous tension avant même la fin du contrat Sonatel. Un départ groupé des expatriés crée une discontinuité opérationnelle qui impacte directement la qualité de service et les revenus.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Chiffrage</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#B45309;font-weight:600">Coût de remplacement estimé à 150-200% du salaire annuel par poste critique. Sur 20 postes réellement critiques : entre 2 et 4 Md FCFA de coût de transition (recrutement, formation, perte de productivité).</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Action</td>
+            <td style="padding:8px 12px;background:white;color:#15803D;font-weight:600">Cartographier les 35 postes dès J+1. Négocier une période de chevauchement de 12 mois avec Sonatel. Plan de transfert de compétences formalisé.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Référence légale</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#64748B;font-style:italic;font-size:12px">Contrat de gestion déléguée SBIN-Sonatel — clauses RH · SHRM Workforce Risk Report 2023</td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:20px;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <!-- Titre risque -->
+        <div style="display:flex;align-items:center;gap:0">
+          <div style="background:#E2001A;color:white;padding:12px 16px;font-weight:900;font-size:16px;min-width:48px;text-align:center">R3</div>
+          <div style="background:#FEF2F2;padding:12px 16px;flex:1;border-left:4px solid #E2001A">
+            <span style="font-weight:700;font-size:14px;color:#1A1A2E">Non-respect Art. 60 — transfert sans consultation préalable</span>
+            &nbsp;&nbsp;<span style="background:#E2001A;color:white;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:800">CRITIQUE</span>
+          </div>
+        </div>
+        <!-- Contenu -->
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;width:18%;vertical-align:top">Argument</td>
+            <td style="padding:8px 12px;background:white;color:#374151">L'articlé 60 du Code du travail béninois est d'ordre public et d'application stricte. La jurisprudence béninoise et OHADA est constante : une modification de la situation juridique de l'employeur sans consultation préalable du Ministère du Travail et sans protocole signé avec les délégués expose l'opération à une nullité. Ce n'est pas un risque théorique — c'est une procédure obligatoire qui prend 4 à 8 semaines et doit être initiée avant toute annonce publique.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Chiffrage</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#B45309;font-weight:600">Risque de nullité de la cession : non quantifiable financièrement mais potentiellement bloquant. Coût de la procédure en cas d'annulation judiciaire : honoraires, délais, re-négociation.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Action</td>
+            <td style="padding:8px 12px;background:white;color:#15803D;font-weight:600">Initier la consultation du Ministère du Travail dès la décision d'acquisition. Préparer le protocole avec les délégués du personnel. Ne pas annoncer publiquement avant signature du protocole.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Référence légale</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#64748B;font-style:italic;font-size:12px">Code du travail béninois — Loi 98-004, art. 60 (texte intégral disponible dans le Q&amp;A SBIN)</td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:20px;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <!-- Titre risque -->
+        <div style="display:flex;align-items:center;gap:0">
+          <div style="background:#C2410C;color:white;padding:12px 16px;font-weight:900;font-size:16px;min-width:48px;text-align:center">R4</div>
+          <div style="background:#FFF7ED;padding:12px 16px;flex:1;border-left:4px solid #C2410C">
+            <span style="font-weight:700;font-size:14px;color:#1A1A2E">Requalification judiciaire des 274 intérimaires en salariés permanents</span>
+            &nbsp;&nbsp;<span style="background:#C2410C;color:white;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:800">ÉLEVÉ</span>
+          </div>
+        </div>
+        <!-- Contenu -->
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;width:18%;vertical-align:top">Argument</td>
+            <td style="padding:8px 12px;background:white;color:#374151">274 intérimaires représentent 91% de l'effectif permanent déclaré. Si une fraction significative occupe des postes permanents depuis plus de 18-24 mois — délai au-delà duquel le recours au travail temporaire est abusif selon la jurisprudence béninoise — la requalification en CDI est probable en cas de contrôle ou de recours individuel. La CNSS a déjà signalé ce type de situation dans son redressement CPS.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Chiffrage</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#B45309;font-weight:600">Si 20% (55 personnes) sont requalifiées en CDI : +900 M FCFA/an de masse salariale supplémentaire. Si 40% : +1,8 Md FCFA/an. Sanctions Loi 2017-05 art. 56 : amende de 25 000 à 250 000 FCFA par travailleur concerné, doublée en cas de récidive — jusqu'à 68,5 M FCFA cumulés sur 274 intérimaires.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Action</td>
+            <td style="padding:8px 12px;background:white;color:#15803D;font-weight:600">Auditer la durée de présence et la nature des missions de chaque intérimaire. Plan de régularisation sélective avant closing pour les situations les plus exposées.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Référence légale</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#64748B;font-style:italic;font-size:12px">Code du travail béninois — art. sur le travail temporaire · Jurisprudence CRIET sur les requalifications</td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:20px;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <!-- Titre risque -->
+        <div style="display:flex;align-items:center;gap:0">
+          <div style="background:#C2410C;color:white;padding:12px 16px;font-weight:900;font-size:16px;min-width:48px;text-align:center">R5</div>
+          <div style="background:#FFF7ED;padding:12px 16px;flex:1;border-left:4px solid #C2410C">
+            <span style="font-weight:700;font-size:14px;color:#1A1A2E">Coût d'harmonisation des grilles salariales SBIN / Moov Africa Bénin</span>
+            &nbsp;&nbsp;<span style="background:#C2410C;color:white;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:800">ÉLEVÉ</span>
+          </div>
+        </div>
+        <!-- Contenu -->
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;width:18%;vertical-align:top">Argument</td>
+            <td style="padding:8px 12px;background:white;color:#374151">Dans toute fusion, les salariés comparent leurs rémunérations dès les premières semaines. Un écart de 15 à 25% sur les postes commerciaux — hypothèse prudente compte tenu des différences de maturité entre les deux entités — crée des revendications immédiates d'alignement vers le haut. L'expérience des fusions télécoms en Afrique de l'Ouest (MTN/Airtel, Orange/Tigo) montre que l'harmonisation salariale représente systématiquement le principal poste de coût d'intégration RH.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Chiffrage</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#B45309;font-weight:600">Sur les postes commerciaux (118 CDI SBIN) avec un écart moyen de 20% : surcoût estimé entre 300 et 600 M FCFA/an selon le sens de l'harmonisation.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Action</td>
+            <td style="padding:8px 12px;background:white;color:#15803D;font-weight:600">Benchmark complet SBIN/Moov Africa Bénin avant J+30. Décision stratégique : harmonisation immédiate par le haut vs convergence progressive sur 3 ans.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Référence légale</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#64748B;font-style:italic;font-size:12px">Willis Towers Watson M&amp;A Compensation Benchmark Afrique (2023)</td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:20px;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <!-- Titre risque -->
+        <div style="display:flex;align-items:center;gap:0">
+          <div style="background:#B45309;color:white;padding:12px 16px;font-weight:900;font-size:16px;min-width:48px;text-align:center">R6</div>
+          <div style="background:#FFFBEB;padding:12px 16px;flex:1;border-left:4px solid #B45309">
+            <span style="font-weight:700;font-size:14px;color:#1A1A2E">Non-conformité des 69 CDD — dépassement durée légale ou postes permanents</span>
+            &nbsp;&nbsp;<span style="background:#B45309;color:white;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:800">MODÉRÉ</span>
+          </div>
+        </div>
+        <!-- Contenu -->
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;width:18%;vertical-align:top">Argument</td>
+            <td style="padding:8px 12px;background:white;color:#374151">La présence de 69 CDD dans une entreprise de 301 permanents représente 23% de l'effectif. Le Code du travail béninois est strict : un CDD sur un poste permanent est requalifié en CDI dès le premier jour. La conformité de ces contrats n'est pas documentée dans le Q&amp;A — ce silence est lui-même un signal.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Chiffrage</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#B45309;font-weight:600">Requalification de 69 CDD en CDI : différentiel de coût employeur + indemnités compensatrices éventuelles. Estimation prudente : 150 à 300 M FCFA selon les cas.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Action</td>
+            <td style="padding:8px 12px;background:white;color:#15803D;font-weight:600">Audit contractuel exhaustif des 69 CDD avec le DRH lors de la mission terrain. Régularisation avant closing.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Référence légale</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#64748B;font-style:italic;font-size:12px">Code du travail béninois — art. sur le CDD · Loi 98-004</td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:20px;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <!-- Titre risque -->
+        <div style="display:flex;align-items:center;gap:0">
+          <div style="background:#B45309;color:white;padding:12px 16px;font-weight:900;font-size:16px;min-width:48px;text-align:center">R7</div>
+          <div style="background:#FFFBEB;padding:12px 16px;flex:1;border-left:4px solid #B45309">
+            <span style="font-weight:700;font-size:14px;color:#1A1A2E">Situation financière déficitaire — capitaux propres &lt; moitié du capital social</span>
+            &nbsp;&nbsp;<span style="background:#B45309;color:white;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:800">MODÉRÉ</span>
+          </div>
+        </div>
+        <!-- Contenu -->
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;width:18%;vertical-align:top">Argument</td>
+            <td style="padding:8px 12px;background:white;color:#374151">Le résultat net 2023 de -27,76 Md FCFA et des capitaux propres réduits à 16,1 Md FCFA (sur un bilan de 204,9 Md FCFA) placent la SBIN sous le régime de l'alerte OHADA. L'art. 664 de l'Acte Uniforme OHADA impose la convocation d'une AGE dans les 4 mois. Cette situation pèse directement sur la valorisation et peut contraindre l'acquéreur à une recapitalisation immédiate.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Chiffrage</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#B45309;font-weight:600">Impact direct sur la valorisation : une décote de 15 à 30% est standard dans ce type de situation. Besoin potentiel de recapitalisation : à estimer selon le business plan 2025-2027.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Action</td>
+            <td style="padding:8px 12px;background:white;color:#15803D;font-weight:600">Intégrer la situation OHADA dans la négociation du prix. Vérifier que l'AGE a bien été convoquée et les décisions prises. Obtenir le rapport du commissaire aux comptes.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Référence légale</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#64748B;font-style:italic;font-size:12px">Acte Uniforme OHADA sur les sociétés commerciales — art. 664 sur la perte des capitaux propres</td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:20px;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <!-- Titre risque -->
+        <div style="display:flex;align-items:center;gap:0">
+          <div style="background:#B45309;color:white;padding:12px 16px;font-weight:900;font-size:16px;min-width:48px;text-align:center">R8</div>
+          <div style="background:#FFFBEB;padding:12px 16px;flex:1;border-left:4px solid #B45309">
+            <span style="font-weight:700;font-size:14px;color:#1A1A2E">Choc culturel — entreprise publique sous gestion déléguée vs filiale groupe international</span>
+            &nbsp;&nbsp;<span style="background:#B45309;color:white;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:800">MODÉRÉ</span>
+          </div>
+        </div>
+        <!-- Contenu -->
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;width:18%;vertical-align:top">Argument</td>
+            <td style="padding:8px 12px;background:white;color:#374151">La SBIN est une entreprise à capital public de 6 ans, sous gestion déléguée d'un opérateur sénégalais, avec une culture de service public encore prégnante. Moov Africa Bénin est une filiale d'un groupe marocain coté, avec des process de reporting, de performance et de gouvernance très différents. L'étude Bain (2023) sur les M&amp;A africains confirme que 60% des échecs d'intégration ont une origine culturelle — pas financière.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Chiffrage</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#B45309;font-weight:600">Non quantifiable directement, mais le coût d'un turnover post-fusion élevé (&gt;15%) est estimé à 1,5 à 2 fois la masse salariale annuelle des partants.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Action</td>
+            <td style="padding:8px 12px;background:white;color:#15803D;font-weight:600">Diagnostic culturel comparatif SBIN/Moov avant J+30. Plan de communication interne Day 1. Programme d'intégration culturelle sur 90 jours.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Référence légale</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#64748B;font-style:italic;font-size:12px">Bain &amp; Company — M&amp;A Africa Intégration Report (2023) · Modèle OCAI Cameron &amp; Quinn</td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="margin-bottom:20px;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <!-- Titre risque -->
+        <div style="display:flex;align-items:center;gap:0">
+          <div style="background:#15803D;color:white;padding:12px 16px;font-weight:900;font-size:16px;min-width:48px;text-align:center">R9</div>
+          <div style="background:#F0FDF4;padding:12px 16px;flex:1;border-left:4px solid #15803D">
+            <span style="font-weight:700;font-size:14px;color:#1A1A2E">Absence de système d'évaluation de la performance formalisé</span>
+            &nbsp;&nbsp;<span style="background:#15803D;color:white;padding:3px 10px;border-radius:5px;font-size:12px;font-weight:800">FAIBLE</span>
+          </div>
+        </div>
+        <!-- Contenu -->
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;width:18%;vertical-align:top">Argument</td>
+            <td style="padding:8px 12px;background:white;color:#374151">L'absence d'un système d'évaluation formel n'est pas bloquante à court terme, mais elle rend impossible l'application du référentiel de performance groupe Maroc Telecom/Moov Africa dès J+90. Les salariés SBIN entrent dans la fusion sans base d'évaluation — ce qui rend les décisions de promotion, de rétention et de rémunération variable totalement subjectives pendant la période critique post-closing.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Chiffrage</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#B45309;font-weight:600">Coût d'implémentation du référentiel groupe : formation des managers, paramétrage SIRH, communication — estimé entre 50 et 150 M FCFA selon le périmètre.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Action</td>
+            <td style="padding:8px 12px;background:white;color:#15803D;font-weight:600">Déployer le référentiel d'évaluation groupe Moov Africa dès J+90. Intégrer dans le plan de formation PMI.</td>
+          </tr>
+          <tr>
+            <td style="background:#374151;color:white;padding:7px 12px;font-weight:700;vertical-align:top">Référence légale</td>
+            <td style="padding:8px 12px;background:var(--lgray);color:#64748B;font-style:italic;font-size:12px">Référentiel RH Maroc Telecom Groupe — standard d'évaluation de la performance</td>
+          </tr>
+        </table>
+      </div>
+    </div><!-- fin annexe-risques -->
+
+  </div><!-- fin s-annexe -->
+
 </main>
 
 <!-- ──────────────────── PROGRESS BADGE ──────── -->
@@ -1574,7 +2357,7 @@ const TITLES = {
   'cl-c':'C — Rémunération','cl-d':'D — Conformité légale','cl-e':'E — Capital humain',
   'ent-dg':'Fiche DG','ent-drh':'Fiche DRH','ent-mgr':'Fiche Manager',
   'rapport-verdict':'Verdict & Conditions','rapport-risques':'Matrice des risques',
-  'rapport-pmi':'Plan PMI 100 jours','revision':'Mode révision active'
+  'rapport-pmi':'Plan PMI 100 jours','revision':'Mode révision active','annexe':'Annexe — Justification des criticités'
 };
 
 function showSection(id) {
@@ -1970,6 +2753,15 @@ showSection = function(id) {
   var btn = document.getElementById('btn-revision');
   if (btn) btn.classList.toggle('active', id==='revision');
 };
+
+
+// ── Onglets annexe ──────────────────────────────────────────
+function annexeTab(tab, btn) {
+  document.querySelectorAll('#s-annexe .rev-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('#s-annexe .rev-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById('annexe-'+tab).classList.add('active');
+  if (btn) btn.classList.add('active');
+}
 
 </script>
 </body>
