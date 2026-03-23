@@ -822,24 +822,7 @@ body {
 <body>
 
 
-<!-- Bandeau installation PWA -->
-<div id="install-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;
-  background:var(--navy);color:white;padding:14px 20px;z-index:300;
-  display:flex;align-items:center;justify-content:space-between;
-  box-shadow:0 -4px 16px rgba(0,48,135,0.3)">
-  <div>
-    <div style="font-size:13px;font-weight:700">Installer sur l'écran d'accueil</div>
-    <div style="font-size:11px;opacity:0.7;margin-top:2px">Accès hors connexion, plein écran</div>
-  </div>
-  <div style="display:flex;gap:10px">
-    <button onclick="dismissInstall()" style="background:transparent;border:1px solid rgba(255,255,255,0.3);
-      color:white;padding:8px 14px;border-radius:6px;font-size:12px;cursor:pointer;
-      -webkit-appearance:none">Plus tard</button>
-    <button onclick="installApp()" style="background:var(--lblue);border:none;
-      color:white;padding:8px 16px;border-radius:6px;font-size:12px;font-weight:700;
-      cursor:pointer;-webkit-appearance:none">Installer</button>
-  </div>
-</div>
+<!-- Bouton install déplacé dans le menu latéral -->
 
 <button id="menu-toggle" onclick="toggleSidebar()">☰</button>
 <div id="overlay" onclick="closeSidebar()"></div>
@@ -921,6 +904,19 @@ body {
       <a class="nav-link" onclick="showSection('revision')">
         <span class="dot" style="background:#0099D8"></span> &#x1F9E0; Mode révision
       </a>
+    </div>
+    <div id="sidebar-install" style="display:none;padding:8px 0 4px;border-top:1px solid rgba(255,255,255,0.12)">
+      <button id="btn-install-sidebar"
+        onclick="installApp()"
+        style="width:100%;background:var(--lblue);color:white;border:none;
+          border-radius:8px;padding:11px 14px;font-size:13px;font-weight:700;
+          cursor:pointer;-webkit-appearance:none;touch-action:manipulation;
+          display:flex;align-items:center;gap:10px;justify-content:center">
+        &#x2B07; Installer sur l'écran d'accueil
+      </button>
+      <div style="font-size:10px;color:rgba(255,255,255,0.4);text-align:center;margin-top:5px">
+        Accès hors connexion · plein écran
+      </div>
     </div>
     <div id="sidebar-footer">Mission terrain · Cotonou 2026</div>
 </aside>
@@ -1736,14 +1732,14 @@ window.addEventListener('beforeinstallprompt', function(e) {
   _deferredPrompt = e;
   // Afficher le bandeau après 3 secondes
   setTimeout(function() {
-    const banner = document.getElementById('install-banner');
-    if (banner) banner.style.display = 'flex';
+    const banner = document.getElementById('sidebar-install');
+    if (banner) banner.style.display = 'block';
   }, 3000);
 });
 
 function installApp() {
-  const banner = document.getElementById('install-banner');
-  if (banner) banner.style.display = 'none';
+  const si = document.getElementById('sidebar-install');
+  if (si) si.style.display = 'none';
   if (_deferredPrompt) {
     _deferredPrompt.prompt();
     _deferredPrompt.userChoice.then(function(result) {
@@ -1753,14 +1749,14 @@ function installApp() {
 }
 
 function dismissInstall() {
-  const banner = document.getElementById('install-banner');
-  if (banner) banner.style.display = 'none';
+  const si = document.getElementById('sidebar-install');
+  if (si) si.style.display = 'none';
   try { localStorage.setItem('ddr-install-dismissed','1'); } catch(e){}
 }
 
 window.addEventListener('appinstalled', function() {
-  const banner = document.getElementById('install-banner');
-  if (banner) banner.style.display = 'none';
+  const si = document.getElementById('sidebar-install');
+  if (si) si.style.display = 'none';
   _deferredPrompt = null;
 });
 
