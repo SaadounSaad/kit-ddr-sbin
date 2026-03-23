@@ -94,6 +94,84 @@
   font-size: 13px; color: var(--dkgray);
 }
 
+
+/* ══ MODE PAYSAGE TABLETTE ══════════════════════════════════ */
+
+/* Tablettes en paysage : 600px–1024px de hauteur, largeur > hauteur */
+@media (orientation: landscape) and (max-height: 600px) {
+  /* Petits écrans en paysage (téléphones) — sidebar escamotée */
+  :root { --sidebar-w: 0px; }
+  #sidebar { transform: translateX(-260px); width: 260px; }
+  #sidebar.open { transform: translateX(0); }
+  #main { margin-left: 0; }
+  #menu-toggle { display: flex; }
+  #topbar { padding: 10px 14px 10px 60px; }
+  .section { padding: 12px 12px 32px; }
+  .sec-header { padding: 14px 18px; }
+  .sec-header h2 { font-size: 16px; }
+  .checklist-table { font-size: 12px; }
+  .checklist-table th, .checklist-table td { padding: 6px 6px; }
+}
+
+@media (orientation: landscape) and (min-height: 601px) and (max-height: 900px) {
+  /* Tablettes en paysage — sidebar réduite, contenu optimisé */
+  :root { --sidebar-w: 220px; }
+  #sidebar { width: 220px; }
+  .nav-link { padding: 8px 16px; font-size: 13px; }
+  .nav-section { padding: 8px 18px 3px; font-size: 10px; }
+  #topbar { padding: 10px 16px 10px calc(220px + 16px); }
+  #main { margin-left: 220px; }
+  .section { padding: 16px 18px 40px; }
+  .sec-header { padding: 14px 20px; }
+  .sec-header h2 { font-size: 18px; }
+  .sec-header p  { font-size: 12px; }
+  /* Tableaux check-list plus compacts */
+  .checklist-table { font-size: 12px; }
+  .checklist-table th { padding: 7px 8px; font-size: 11px; }
+  .checklist-table td { padding: 7px 8px; }
+  /* KPIs sur 3 colonnes */
+  .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+  /* Risques sur 2 colonnes */
+  .risque-grid { grid-template-columns: repeat(2, 1fr); }
+  /* Fiches entretien */
+  .profil-card { padding: 16px 18px; }
+}
+
+@media (orientation: landscape) and (min-height: 901px) {
+  /* Grandes tablettes en paysage (iPad Pro etc.) — sidebar pleine */
+  :root { --sidebar-w: 260px; }
+  /* Layout standard — rien à changer */
+}
+
+/* Correction topbar en paysage — éviter chevauchement avec sidebar */
+@media (orientation: landscape) and (max-width: 1024px) {
+  #topbar {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+  }
+  /* Tableaux : colonnes Observations plus larges */
+  .obs-cell { min-width: 160px; }
+  /* Boutons mode révision */
+  .rev-tab { padding: 6px 12px; font-size: 12px; }
+  /* Timer widget — repositionner pour ne pas masquer le contenu */
+  #timer-widget { top: 60px; right: 10px; }
+}
+
+/* Safe area pour les encoches en paysage */
+@media (orientation: landscape) {
+  #topbar {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+  #sidebar {
+    padding-left: env(safe-area-inset-left, 0px);
+  }
+  main {
+    padding-bottom: max(20px, env(safe-area-inset-bottom, 0px));
+  }
+}
+
 </style>
 <style>
 :root {
@@ -1611,6 +1689,44 @@ renderPMI();
 renderIndicateurs();
 loadNotes('accueil');
 updateProgress();
+
+
+// ── Gestion orientation ──────────────────────────
+function handleOrientationChange() {
+  var sidebar = document.getElementById('sidebar');
+  var h = window.innerHeight;
+  var w = window.innerWidth;
+  var isLandscape = w > h;
+  var isTablet = Math.min(w, h) >= 600;
+
+  if (isLandscape && isTablet && h >= 601 && h <= 900) {
+    // Tablette moyenne en paysage — sidebar réduite mais visible
+    if (sidebar) {
+      sidebar.classList.remove('open');
+    }
+    document.documentElement.style.setProperty('--sidebar-w', '220px');
+    var main = document.getElementById('main');
+    if (main) main.style.marginLeft = '220px';
+  } else if (isLandscape && h < 601) {
+    // Téléphone en paysage — escamoter la sidebar
+    if (sidebar) sidebar.classList.remove('open');
+    document.documentElement.style.setProperty('--sidebar-w', '0px');
+    var main2 = document.getElementById('main');
+    if (main2) main2.style.marginLeft = '0';
+  } else if (!isLandscape || h > 900) {
+    // Portrait ou grande tablette — remettre les valeurs par défaut
+    document.documentElement.style.removeProperty('--sidebar-w');
+    var main3 = document.getElementById('main');
+    if (main3) main3.style.removeProperty('margin-left');
+  }
+}
+
+window.addEventListener('orientationchange', function() {
+  setTimeout(handleOrientationChange, 150); // délai pour que les dimensions soient à jour
+});
+window.addEventListener('resize', handleOrientationChange);
+// Appel initial
+handleOrientationChange();
 
 // ── PWA Install Prompt ──────────────────────────
 let _deferredPrompt = null;
